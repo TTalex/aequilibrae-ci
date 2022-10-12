@@ -7,9 +7,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
-          submodules: recursive
+          repository: TTalex/AequilibraE-GUI
+      
+      - uses: actions/checkout@v3
+        with:
+          repository: TTalex/aequilibrae
+          path: AequilibraE-GUI
 
       - name: Set up Python 3.8
         uses: actions/setup-python@v1
