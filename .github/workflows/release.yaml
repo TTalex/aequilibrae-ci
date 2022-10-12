@@ -8,15 +8,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - uses: actions/checkout@v3
         with:
           repository: TTalex/AequilibraE-GUI
+          path: aequilibrae-ci
       
       - uses: actions/checkout@v3
         with:
           repository: TTalex/aequilibrae
-          path: AequilibraE-GUI
-
-      - uses: actions/checkout@v3
+          path: aequilibrae-ci/AequilibraE-GUI
 
       - name: Set up Python 3.8
         uses: actions/setup-python@v1
