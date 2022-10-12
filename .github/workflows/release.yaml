@@ -24,12 +24,16 @@ jobs:
         with:
           python-version: 3.8
 
-      - uses: actions/checkout@v3
+      - name: Pull custom qgis-plugin-ci
+        uses: actions/checkout@v3
         with:
           repository: TTalex/qgis-plugin-ci
           path: qgis-plugin-ci
       # - name: Install qgis-plugin-ci
       #   run: pip3 install qgis-plugin-ci
+
+      - name: Install qgis-plugin-ci deps
+        run: pip3 install -r qgis-plugin-ci/requirements.txt
 
       - name: Deploy plugin
         run: >-
