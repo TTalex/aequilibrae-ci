@@ -16,6 +16,8 @@ jobs:
           repository: TTalex/aequilibrae
           path: AequilibraE-GUI
 
+      - uses: actions/checkout@v3
+
       - name: Set up Python 3.8
         uses: actions/setup-python@v1
         with:
@@ -29,4 +31,3 @@ jobs:
           qgis-plugin-ci
           release ${GITHUB_REF/refs\/tags\//}
           --github-token ${{ secrets.GITHUB_TOKEN }}
-        working-directory: /
