@@ -13,13 +13,13 @@ jobs:
         with:
           repository: TTalex/AequilibraE-GUI
           path: AequilibraE
-          ref: 0ee8a7d
+          ref: 0ee8a7d0ee8a7d30182b349c34656cec199d053f3d7980f
       
       - uses: actions/checkout@v3
         with:
           repository: TTalex/aequilibrae
           path: AequilibraE/aequilibrae
-          ref: 12f8bd3
+          ref: 12f8bd3decf38adfc91da892616547518cbc3ee0
 
       - name: Set up Python 3.8
         uses: actions/setup-python@v1
